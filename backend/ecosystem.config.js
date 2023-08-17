@@ -19,7 +19,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: 'https://github.com/Garri-99/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
-      ssh_options: 'key /Users/Harry/.ssh/id_ed25519',
+      ssh_options: ['key /Users/Harry/.ssh/id_ed25519'],
       'pre-deploy': `scp ./*.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
       'post-deploy': 'npm i && npm run build',
     },
