@@ -14,7 +14,7 @@ const app = express();
 mongoose.connect(DB_ADDRESS);
 
 // Только для локальных тестов. Не используйте это в продакшене
-app.use(cors({ origin: ['http://mestogram.garri.nomoreparties.co/signup', 'http://mestogram.garri.nomoreparties.co'] }));
+app.use(cors({ origin: ['http://51.250.65.33', 'https://51.250.65.33'] }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
